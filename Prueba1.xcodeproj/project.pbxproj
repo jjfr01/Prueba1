@@ -119,11 +119,11 @@
 				105C5D652045FF7100320F3D /* ViewController5.swift */,
 				1C4FE9DD2047FD5200AA8FAB /* ViewCellContent.swift */,
 				107EFE6C2047591400EA675A /* customCell.swift */,
+				1C4FE9DF2048232500AA8FAB /* CallBack.swift */,
 				10B8B5A720455497004AE40C /* Main.storyboard */,
 				10B8B5AA20455497004AE40C /* Assets.xcassets */,
 				10B8B5AC20455497004AE40C /* LaunchScreen.storyboard */,
 				10B8B5AF20455497004AE40C /* Info.plist */,
-				1C4FE9DF2048232500AA8FAB /* CallBack.swift */,
 			);
 			path = Prueba1;
 			sourceTree = "<group>";

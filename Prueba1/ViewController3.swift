@@ -54,8 +54,14 @@ class ViewController3: UIViewController, UICollectionViewDataSource, UICollectio
     
     func obtenerProducto(indexPath: IndexPath) {
         let cell : customCell = firstCollection!.cellForItem(at: indexPath) as! customCell
-        print(cell.labelCell.text)
+        print(cell.labelCell.text ?? "")
         send = cell.labelCell.text
+    }
+    
+    func removeItemCollection(indexPath: IndexPath) {
+        print(indexPath.row)
+        arrayNum.remove(at: indexPath.row)
+        firstCollection?.reloadData()
     }
     
     // MARK: - Navigation
@@ -63,13 +69,23 @@ class ViewController3: UIViewController, UICollectionViewDataSource, UICollectio
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        guard let viewCellContent = segue.destination as? ViewCellContent else {
-            fatalError("Unexpected destination: \(segue.destination)")
+        switch(segue.identifier ?? "") {
+            
+        case "ir4": break
+            
+        case "ir5":
+            
+            guard let viewCellContent = segue.destination as? ViewCellContent else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            viewCellContent.contenido = send!
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
         }
         
-        viewCellContent.contenido = send!
         
-        //viewCellContent.contenido =
         
     }
 

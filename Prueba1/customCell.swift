@@ -17,6 +17,10 @@ class customCell: UICollectionViewCell {
     
     @IBAction func cellButton(_ sender: UIButton) {
         callBack?.obtenerProducto(indexPath: indexPath)
+        
     }
     
+    @IBAction func cellRemoveButton(_ sender: Any) {
+        callBack?.removeItemCollection(indexPath: indexPath)
+    }
 }

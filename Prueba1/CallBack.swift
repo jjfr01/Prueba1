@@ -10,4 +10,5 @@ import Foundation
 
 protocol callBack {
     func obtenerProducto(indexPath : IndexPath)
+    func removeItemCollection(indexPath : IndexPath)
 }

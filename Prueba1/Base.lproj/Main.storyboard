@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -133,45 +134,56 @@
                                 <rect key="frame" x="16" y="80" width="343" height="512"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cNQ-wM-yI6">
-                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="numCell" id="bgK-U5-SuQ" customClass="customCell" customModule="Prueba1" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                        <rect key="frame" x="10" y="10" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOj-aL-7Lj">
-                                                    <rect key="frame" x="27" y="70" width="46" height="30"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <connections>
-                                                        <action selector="cellButton:" destination="bgK-U5-SuQ" eventType="touchUpInside" id="8jX-fa-pBA"/>
-                                                        <segue destination="KRW-WW-Ndl" kind="show" id="g2m-p8-Fiu"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqn-9q-yO1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="82"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zik-jj-4mv">
+                                                    <rect key="frame" x="55" y="75" width="65" height="45"/>
+                                                    <state key="normal" title="Remove"/>
+                                                    <connections>
+                                                        <action selector="cellRemoveButton:" destination="bgK-U5-SuQ" eventType="touchUpInside" id="a5b-aB-8Ie"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOj-aL-7Lj">
+                                                    <rect key="frame" x="8" y="83" width="49" height="29"/>
+                                                    <state key="normal" title="See"/>
+                                                    <connections>
+                                                        <action selector="cellButton:" destination="bgK-U5-SuQ" eventType="touchUpInside" id="8jX-fa-pBA"/>
+                                                        <segue destination="KRW-WW-Ndl" kind="show" identifier="ir5" id="g2m-p8-Fiu"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="oOj-aL-7Lj" firstAttribute="top" secondItem="uqn-9q-yO1" secondAttribute="bottom" id="86v-W7-wuG"/>
-                                            <constraint firstItem="uqn-9q-yO1" firstAttribute="top" secondItem="bgK-U5-SuQ" secondAttribute="top" id="AZU-WE-D4k"/>
-                                            <constraint firstItem="oOj-aL-7Lj" firstAttribute="top" secondItem="bgK-U5-SuQ" secondAttribute="top" constant="70" id="G8U-0W-4TL"/>
-                                            <constraint firstAttribute="trailing" secondItem="oOj-aL-7Lj" secondAttribute="trailing" constant="27" id="RvQ-UH-nTb"/>
-                                            <constraint firstAttribute="trailing" secondItem="uqn-9q-yO1" secondAttribute="trailing" id="YpE-gL-WFw"/>
-                                            <constraint firstItem="oOj-aL-7Lj" firstAttribute="leading" secondItem="bgK-U5-SuQ" secondAttribute="leading" constant="27" id="eyB-ZI-8sG"/>
-                                            <constraint firstItem="uqn-9q-yO1" firstAttribute="leading" secondItem="bgK-U5-SuQ" secondAttribute="leading" id="nHG-zx-Fx5"/>
-                                            <constraint firstAttribute="bottom" secondItem="oOj-aL-7Lj" secondAttribute="bottom" id="wKG-Og-nnp"/>
+                                            <constraint firstItem="oOj-aL-7Lj" firstAttribute="top" secondItem="uqn-9q-yO1" secondAttribute="bottom" constant="1" id="1DQ-JF-eqq"/>
+                                            <constraint firstItem="oOj-aL-7Lj" firstAttribute="top" secondItem="bgK-U5-SuQ" secondAttribute="topMargin" constant="75" id="8ai-9x-XfE"/>
+                                            <constraint firstItem="oOj-aL-7Lj" firstAttribute="leading" secondItem="bgK-U5-SuQ" secondAttribute="leadingMargin" id="HY9-2R-xbp"/>
+                                            <constraint firstAttribute="trailing" secondItem="uqn-9q-yO1" secondAttribute="trailing" id="J69-sU-ZsU"/>
+                                            <constraint firstItem="oOj-aL-7Lj" firstAttribute="bottom" secondItem="bgK-U5-SuQ" secondAttribute="bottomMargin" id="Ro6-Dx-iQG"/>
+                                            <constraint firstItem="uqn-9q-yO1" firstAttribute="top" secondItem="bgK-U5-SuQ" secondAttribute="top" id="Tq1-wN-Ome"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="oOj-aL-7Lj" secondAttribute="trailing" constant="55" id="VDp-0L-fZm"/>
+                                            <constraint firstAttribute="bottom" secondItem="zik-jj-4mv" secondAttribute="bottom" id="iRL-1T-aUZ"/>
+                                            <constraint firstItem="zik-jj-4mv" firstAttribute="top" secondItem="bgK-U5-SuQ" secondAttribute="top" constant="75" id="j77-s7-CZZ"/>
+                                            <constraint firstItem="uqn-9q-yO1" firstAttribute="leading" secondItem="bgK-U5-SuQ" secondAttribute="leading" id="kNv-Qf-C8j"/>
+                                            <constraint firstItem="zik-jj-4mv" firstAttribute="leading" secondItem="bgK-U5-SuQ" secondAttribute="leading" constant="55" id="plq-9c-3R8"/>
+                                            <constraint firstAttribute="trailing" secondItem="zik-jj-4mv" secondAttribute="trailing" id="yhA-ER-zts"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="labelCell" destination="uqn-9q-yO1" id="yxR-GD-ncJ"/>
