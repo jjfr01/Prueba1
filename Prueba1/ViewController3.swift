@@ -82,11 +82,14 @@ class ViewController3: UIViewController, UICollectionViewDataSource, UICollectio
             viewCellContent.contenido = send!
             
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            fatalError("Unexpected Segue Identifier; \(segue.identifier!)")
         }
-        
-        
-        
+    }
+    
+    @IBAction func volverDeslizar(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ViewController4 {
+            
+        }
     }
 
 }

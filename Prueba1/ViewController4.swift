@@ -12,7 +12,6 @@ class ViewController4: UIViewController {
 
     @IBOutlet weak var editText: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,13 +28,16 @@ class ViewController4: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        guard let viewController5 = segue.destination as? ViewController5 else {
-            fatalError("Unexpected destination: \(segue.destination)")
-        }
-        
-        viewController5.contenido = editText.text ?? ""
-        
-        
+        switch(segue.identifier ?? "") {
+            
+        case "ir6":
+            guard let viewController5 = segue.destination as? ViewController5 else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            viewController5.contenido = editText.text ?? ""
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier!)")
+        } 
     }
 
 }
