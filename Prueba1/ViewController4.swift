@@ -36,7 +36,8 @@ class ViewController4: UIViewController {
             }
             viewController5.contenido = editText.text ?? ""
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier!)")
+            //Nada
+            break
         } 
     }
 

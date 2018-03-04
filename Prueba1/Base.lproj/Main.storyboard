@@ -288,20 +288,20 @@
                             <constraint firstItem="whm-Jd-Obb" firstAttribute="trailing" secondItem="3LP-Lh-Scp" secondAttribute="trailing" constant="165" id="wLL-VH-Baj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="whm-Jd-Obb"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="VnL-lb-Fe6" appends="YES" id="hqg-3N-QYa"/>
-                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="PJP-uM-GMU"/>
+                    <navigationItem key="navigationItem" id="PJP-uM-GMU">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="LCM-j3-9bs">
+                            <connections>
+                                <segue destination="q6r-O5-nFO" kind="unwind" unwindAction="volverDeslizarWithSender:" id="tSb-LP-M34"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="editText" destination="h2q-9m-lb2" id="FWh-lp-mXU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y75-Cj-hKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer id="9dD-QE-6Ac">
-                    <rectEdge key="edges" left="YES"/>
-                </screenEdgePanGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="VnL-lb-Fe6"/>
+                <exit id="q6r-O5-nFO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5760.8000000000002" y="117.39130434782609"/>
         </scene>
@@ -363,7 +363,6 @@
         <!--Navigation Controller-->
         <scene sceneID="zcu-ZX-Qce">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6bQ-dL-Rmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H9W-EW-fNz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Io-Xw-Icv">
@@ -375,6 +374,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YvA-7R-Vg3"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bQ-dL-Rmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-359" y="117"/>
         </scene>
